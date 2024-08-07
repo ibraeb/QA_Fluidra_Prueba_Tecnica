@@ -1,0 +1,21 @@
+{
+  "name": "qa_fluidra_prueba_tecnica",
+  "version": "1.0.0",
+  "description": "This repository will contain the code for the technical test",
+  "main": "index.js",
+  "scripts": {
+    "testE2E": "cucumber-js -p e2e --config=./cucumber.js -f json:reports/cucumber_report.json --format summary --format @cucumber/pretty-formatter || true && npm run report",
+    "report": "npx ts-node src/tests/utils/report/reporter.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.8.0",
+    "@cucumber/pretty-formatter": "^1.0.1",
+    "@playwright/test": "^1.46.0",
+    "@types/node": "^22.1.0",
+    "ts-node": "^10.9.2",
+    "cucumber-html-reporter": "^7.1.1"
+  }
+}
